@@ -75,12 +75,66 @@ screen using the described method.
 <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e' width = '400px'>
 
 ### 2.2 Making Obstacles Move:
-Each obstacle initially starts at specific coordinates (figure 4) on the screen, typically
+Each obstacle initially starts at specific coordinates on the screen, typically
  towards the right side. To simulate movement from right to left, we decrement the X-coordinate
  of each obstacle block. By decreasing the X-coordinate value at a predefined speed, we create the
  illusion of obstacles moving towards the left side of the screen. While Y coordinates will be kept
  unchanged as our game does not allow obstacles to move up and down.
 
+###  2.3 Block Character Controls:
+To facilitate responsive vertical movement of the block character, we employ a
+ variable, i.e., up_ctrl, which consists of 2 bits. Initially, up_ctrl is set to 2’b00, indicating
+ that the block character is stationary.
 
+  When the player presses the up button, the value of up_ctrl is set to
+ 2’b11. While up_ctrl remains at 2’b11, the block character's vertical position (Y-coordinate) is
+ incremented by a certain rate, causing it to move upwards on the screen. This mechanism allows
+ players to control the block character's ascent by simply holding down the up button.
+ Conversely, if the player presses the down button, the value of up_ctrl is
+ changed to 2’b10. While up_ctrl remains at 2’b10, the block character's vertical position
+ is decremented by the same rate, resulting in downward movement. This intuitive control scheme
+ enables players to navigate the block character vertically with ease
 
+ ###  2.4 Counting the Score:
+We implement a scoring mechanism that rewards players for successfully navigating the
+ block character through obstacles. Each element in the game, including obstacles and the block
+ character, is assigned a starting X-coordinate (x_start) and an ending X-coordinate (x_end),
+ which is calculated as (x_start+ M), where M is a constant.
+ When the game detects that the ending X-coordinate (x_end) of an obstacle is less than
+ the starting X-coordinate (x_start) of the block character, it indicates that there is no further
+ chance of collision between the two elements. In this situation, the score counter variable is
+ increased by 1.
+ 
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/940c7b89-8639-401b-aa7a-c7f45c5fabe8' width = '400px'>
+
+### 2.5 Displaying the Score:
+On the Basys3 board's 7-segment display, the player's score will be shown in real-time
+ during gameplay. The score variable will be taken as input to the module, and the current score
+ will be shown.
+
+###  2.6 Score-Based Level Functionality:
+The x-axis speed of obstacles will be adjusted as a function of the player's score to
+ introduce dynamic gameplay progression. As the player's score increases, the speed of obstacles
+ will slightly increase, creating a smoother and more challenging level-up system.
+ (
+ 𝑠𝑝𝑒𝑒𝑑 = 𝑓 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒
+ )         
+: 𝑠𝑝𝑒𝑒𝑑 ↑ 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒 ↑
+ This adjustment will be implemented by modifying the rate at which the x-coordinate of
+ obstacles decreases based on the player's score. As the score rises, the decrement rate will
+ increase proportionally, causing obstacles to move faster across the screen. This dynamic scaling
+ ensures that the game's difficulty gradually ramps as players achieve higher scores, providing a
+ more engaging and rewarding gameplay experience.
+
+ ### 2.7 Game-Over Situation:
+ In ‘Dodge Through Bars’, the game-over occurs when the block character collides with
+ an obstacle. Collision detection is implemented by continuously monitoring the positions of the
+ block character and obstacles on the screen.
+ When the game detects that the boundaries of the block character intersect with those of
+ an obstacle, it triggers the game over sequence. This sequence includes displaying a game-over
+ message on the screen, halting further movement of the block character and obstacles, and
+ presenting the player with their final score.
+
+ 
+ 
 
