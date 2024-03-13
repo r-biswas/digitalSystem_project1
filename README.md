@@ -17,5 +17,6 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  
   This project will provide hands-on learning in digital logic, Verilog, and FPGA
  programming and real-time graphics for entertainment and educational purposes.
+![Desktop - 1 (1)](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377)
 
-![image](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/6ebf6902-5dec-4f78-a685-4058bb2d4a6e)
+ 
