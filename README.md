@@ -72,7 +72,7 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  We can display the block and obstacle characters on the
 screen using the described method.
 
-<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e' width = '400px'>
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e' width = '400px' align="center">
 
 ### 2.2 Making Obstacles Move:
 Each obstacle initially starts at specific coordinates on the screen, typically
@@ -105,7 +105,7 @@ We implement a scoring mechanism that rewards players for successfully navigatin
  chance of collision between the two elements. In this situation, the score counter variable is
  increased by 1.
  
-<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/940c7b89-8639-401b-aa7a-c7f45c5fabe8' width = '400px'>
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/940c7b89-8639-401b-aa7a-c7f45c5fabe8' width = '400px' align="center">
 
 ### 2.5 Displaying the Score:
 On the Basys3 board's 7-segment display, the player's score will be shown in real-time
