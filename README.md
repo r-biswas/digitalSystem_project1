@@ -1,7 +1,7 @@
-## Digital System Project:1 # Dodge Through Bars Game
+# Digital System Project:1 => Dodge Through Bars Game
 <img src ='' width= '100'>
 
-###  Project Overview:
+##  Project Overview:
 In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-style game
  using the Basys 3 FPGA board. Players can control a block character through a series of
  upcoming obstacles, represented as rectangle bars on the screen. The objective is to avoid
@@ -20,9 +20,8 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  
 <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377' width= '800px'>
 
- ### 1. About The Game
-####  1.1 Playable Boundary:
-
+ ## 1. About The Game
+ ###  1.1 Playable Boundary:
  The game boundary screen is visually represented as a rectangular display monitor area
  delineated by distinct borders or edges. Within this defined closed area, players can observe the
  movement of the block character and obstacles as they interact with the game environment. The
@@ -31,7 +30,7 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  Inside the boundary, the player will aim to move the block up and down to dodge the
  obstacles coming towards it and save from any collision to gain a point.
  
- ####  1.2 The Block Character:
+ ###  1.2 The Block Character:
  The block character is the player's avatar in ‘Dodge Through Bars,’ representing their
  presence in the game world. It is typically depicted as a solid-coloured square against the
  background screen, with distinct visual characteristics distinguishing it from other in-game
@@ -43,7 +42,7 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  on screen, dodging obstacles and manoeuvring through narrow gaps to progress further in the
  game.
 
- ####  1.3 The Obstacle Character:
+ ###  1.3 The Obstacle Character:
  The obstacle character represents the challenges players must navigate to progress in the
  game. It appears as blocks that move horizontally across the screen from the right side towards
  the left. The obstacle character is visually depicted as solid-coloured rectangular blocks against
@@ -51,8 +50,8 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  The obstacle character moves continuously from the right of the screen to the left at a
  defined speed. The movement of the obstacles adds unpredictability to the gameplay.
 
- ####  1.4 Control Buttons:
-Players can control the movement of the block character using two of the five push
+ ###  1.4 Control Buttons:
+ Players can control the movement of the block character using two of the five push
  buttons available on the Basys 3 board. As mentioned, the upper and bottom push buttons will
  vertically navigate the block character across the screen. Pressing the upper button will move the
  block character upwards while pressing the bottom button will move it downwards.
@@ -62,8 +61,8 @@ Players can control the movement of the block character using two of the five pu
 
  <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38' width = '800px'>
 
-  ###  2. Game Mechanisms & Logics:
-  #### 2.1 Visual Output (Display):
+  ##  2. Game Mechanisms & Logics:
+  ### 2.1 Visual Output (Display):
   VGA communication will be utilized to display the game on a monitor. VGA (Video
  Graphics Array) is a standard for displaying video signals on computer monitors. Verilog modules
  will be created to generate VGA signals, including horizontal sync, vertical sync, pixel clock, and
@@ -76,7 +75,7 @@ screen using the described method.
 
 <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e' width = '400px'>
 
-#### 2.2 Making Obstacles Move:
+### 2.2 Making Obstacles Move:
 Each obstacle initially starts at specific coordinates (figure 4) on the screen, typically
  towards the right side. To simulate movement from right to left, we decrement the X-coordinate
  of each obstacle block. By decreasing the X-coordinate value at a predefined speed, we create the
