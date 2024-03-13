@@ -136,3 +136,5 @@ The x-axis speed of obstacles will be adjusted as a function of the player's sco
 
  
 ## References
+1. https://github.com/FPGADude/Digital-Design/tree/453176c52977123539c0c8a999ce612b4c45e073/FPGA%20Projects/VGA%20Projects/VGA%20No%20Signal%20Screen
+2. https://youtu.be/DqyOiPUn_LM
