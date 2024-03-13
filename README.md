@@ -116,10 +116,9 @@ On the Basys3 board's 7-segment display, the player's score will be shown in rea
 The x-axis speed of obstacles will be adjusted as a function of the player's score to
  introduce dynamic gameplay progression. As the player's score increases, the speed of obstacles
  will slightly increase, creating a smoother and more challenging level-up system.
- (
- 𝑠𝑝𝑒𝑒𝑑 = 𝑓 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒
- )         
-: 𝑠𝑝𝑒𝑒𝑑 ↑ 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒 ↑
+ 
+ (𝑠𝑝𝑒𝑒𝑑 = 𝑓 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒) : 𝑠𝑝𝑒𝑒𝑑 ↑ 𝑐𝑢𝑟𝑟𝑒𝑛𝑡_𝑠𝑐𝑜𝑟𝑒 ↑
+ 
  This adjustment will be implemented by modifying the rate at which the x-coordinate of
  obstacles decreases based on the player's score. As the score rises, the decrement rate will
  increase proportionally, causing obstacles to move faster across the screen. This dynamic scaling
