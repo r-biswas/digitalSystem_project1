@@ -1,5 +1,5 @@
 ## Digital System Project:1 # Dodge Through Bars Game
-
+<img src ='' width= '100'>
 
 ###  Project Overview:
 In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-style game
@@ -17,7 +17,10 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  
   This project will provide hands-on learning in digital logic, Verilog, and FPGA
  programming and real-time graphics for entertainment and educational purposes.
-![Desktop - 1 (1)](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377)
+![Desktop - 1 (1)]()
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377' width= '100'>
+
+https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377
 
  ### 1. About The Game
 ####  1.1 Playable Boundary:
