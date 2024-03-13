@@ -1,5 +1,4 @@
 # Digital System Project:1 - Dodge Through Bars Game
-<img src ='' width= '100'>
 
 ##  Project Overview:
 In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-style game
