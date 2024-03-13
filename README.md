@@ -57,6 +57,7 @@ Players can control the movement of the block character using two of the five pu
  vertically navigate the block character across the screen. Pressing the upper button will move the
  block character upwards while pressing the bottom button will move it downwards.
  These buttons will be the only input from the player to interact with the game.
+ 
  <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/922ab35c-cb7c-430b-bf4e-6778f07c753e' width= '400px'>
 
  <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38' width = '800px'>
@@ -70,9 +71,10 @@ Players can control the movement of the block character using two of the five pu
  board to the monitor. We can create a rectangle by setting the upper and lower ranges on the X
  and Y axes and giving it a different RGB value to make it distinguishable.
  
- Using the described method, we can display the block and obstacle characters on the
- screen.
-![image](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e)
+ We can display the block and obstacle characters on the
+screen using the described method.
+
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/cda53efe-971e-45ff-8af1-9a4a02e11d7e' width = '400px'>
 
 #### 2.2 Making Obstacles Move:
 Each obstacle initially starts at specific coordinates (figure 4) on the screen, typically
