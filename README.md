@@ -1,4 +1,4 @@
-# Digital System Project:1 => Dodge Through Bars Game
+# Digital System Project:1 - Dodge Through Bars Game
 <img src ='' width= '100'>
 
 ##  Project Overview:
