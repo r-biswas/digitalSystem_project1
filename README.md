@@ -58,7 +58,7 @@ Players can control the movement of the block character using two of the five pu
  These buttons will be the only input from the player to interact with the game.
  ![MacBook Air - 1](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/922ab35c-cb7c-430b-bf4e-6778f07c753e)
 
- ![Desktop - 1 (1)](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38)
+ <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38' width = '100'>
 
   ###  2. Game Mechanisms & Logics:
   #### 2.1 Visual Output (Display):
