@@ -105,7 +105,7 @@ We implement a scoring mechanism that rewards players for successfully navigatin
  chance of collision between the two elements. In this situation, the score counter variable is
  increased by 1.
  
-<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/940c7b89-8639-401b-aa7a-c7f45c5fabe8' width = '400px' align="center">
+<img align="center" src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/940c7b89-8639-401b-aa7a-c7f45c5fabe8' width = '400px' >
 
 ### 2.5 Displaying the Score:
 On the Basys3 board's 7-segment display, the player's score will be shown in real-time
