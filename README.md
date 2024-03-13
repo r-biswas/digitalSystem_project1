@@ -17,10 +17,7 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
  
   This project will provide hands-on learning in digital logic, Verilog, and FPGA
  programming and real-time graphics for entertainment and educational purposes.
-![Desktop - 1 (1)]()
 <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377' width= '800px'>
-
-https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377
 
  ### 1. About The Game
 ####  1.1 Playable Boundary:
@@ -59,9 +56,9 @@ Players can control the movement of the block character using two of the five pu
  vertically navigate the block character across the screen. Pressing the upper button will move the
  block character upwards while pressing the bottom button will move it downwards.
  These buttons will be the only input from the player to interact with the game.
- ![MacBook Air - 1](https://github.com/r-biswas/digitalSystem_project1/assets/125371277/922ab35c-cb7c-430b-bf4e-6778f07c753e)
+ <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/922ab35c-cb7c-430b-bf4e-6778f07c753e' width= '800px'>
 
- <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38' width = '100'>
+ <img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/e6099369-e7e3-40b3-9207-415d382f1f38' width = '400px'>
 
   ###  2. Game Mechanisms & Logics:
   #### 2.1 Visual Output (Display):
