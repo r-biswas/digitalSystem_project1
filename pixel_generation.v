@@ -26,7 +26,7 @@ module pixel_generation(
     // Main character box design
     assign box1_on = ((x >= 40)   && (x < 91)   &&  (y >= 200) && (y < 250));
     // Obstacle character box design
-    assign obs1_on = ((x >= 455)   && (x < 600)   &&  (y >= 100) && (y < 130));
+    assign obs1_on = ((x >= 455)   && (x < 590)   &&  (y >= 100) && (y < 130));
     assign obs2_on = ((x >= 400)   && (x < 550)   &&  (y >= 200) && (y < 230));
     assign obs3_on = ((x >= 250)   && (x < 400)   &&  (y >= 150) && (y < 180));
     assign obs4_on = ((x >= 285)   && (x < 430)   &&  (y >= 350) && (y < 380));
