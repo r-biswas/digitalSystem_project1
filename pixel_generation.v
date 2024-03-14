@@ -64,4 +64,6 @@ module pixel_generation(
                 rgb = RED;
             else if(obs4_on)
                 rgb = RED;
+            else
+                rgb = BLACK;
 endmodule
