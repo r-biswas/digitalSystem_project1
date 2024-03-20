@@ -1,9 +1,16 @@
 `timescale 1ns / 1ps
 
-module pixel_generation(
-    input video_on,
-    input [9:0] x, y,
-    output reg [11:0] rgb
+module pixel_gen(
+    input clk,              // 100MHz
+    input reset,            // btnC
+    input up,               // btnU
+    input down,             // btnD
+    
+    input [9:0] x,          // from vga controller
+    input [9:0] y,          // from vga controller
+    input video_on,         // from vga controller
+    input p_tick,           // 25MHz from vga controller
+    output reg [11:0] rgb   // to DAC, to vga connector
     );
     
     // RGB Color Values
@@ -18,43 +25,86 @@ module pixel_generation(
     parameter GRAY   = 12'hAAA;     // some of each color
     
     // Pixel Location Status Signals
-//    wire u_white_on, u_yellow_on, u_aqua_on, u_green_on, u_violet_on, u_red_on, u_blue_on;
-//    wire l_blue_on, l_black1_on, l_violet_on, l_gray_on, l_aqua_on, l_black2_on, l_white_on;
+        // 60Hz refresh tick
+    wire refresh_tick;
+    assign refresh_tick = ((y == 481) && (x == 0)) ? 1 : 0; // start of vsync(vertical retrace)
+    
+    // ********************************************************************************
+    // maximum x, y values in display area
+    parameter X_MAX = 639;
+    parameter Y_MAX = 479;
+    
+    // Box
+    // square rom boundaries
+    parameter BOXX_SIZE = 28;
+    parameter X_START = 60;                // starting x position - left rom edge centered horizontally
+    parameter Y_START = 210;                // starting y position - centered in lower yellow area vertically
+    
+    
+    parameter Y_TOP = 30;                   // against top home/wall areas 
+    parameter Y_BOTTOM = 451;               // against bottom green wall
+    
+    wire [9:0] y_boxx_t, y_boxx_b;          // boxx vertical boundary signals  
+
+    reg [9:0] y_boxx_reg = Y_START;         // boxx starting position X
+    reg [9:0] x_boxx_reg = X_START;         // boxx starting position Y
+    
+    reg [9:0] y_boxx_next, x_boxx_next;     // signals for register buffer 
+    parameter BOXX_VELOCITY = 4;            // boxx velocity  
+    
+    
+    // Register Control
+    always @(posedge clk or posedge reset)
+        if(reset) begin
+            x_boxx_reg <= X_START;
+            y_boxx_reg <= Y_START;
+        end
+        else begin
+            x_boxx_reg <= x_boxx_next;
+            y_boxx_reg <= y_boxx_next;
+        end
+   
+    always @* begin
+        y_boxx_next = y_boxx_reg;       // no move
+        x_boxx_next = x_boxx_reg;       // no move
+        if(refresh_tick)                
+            if(up & (y_boxx_t > BOXX_VELOCITY) & (y_boxx_t > (Y_TOP + BOXX_VELOCITY)))
+                y_boxx_next = y_boxx_reg - BOXX_VELOCITY;  // move up
+            else if(down & (y_boxx_b < (Y_MAX - BOXX_VELOCITY)) & (y_boxx_b < (Y_BOTTOM - BOXX_VELOCITY)))
+                y_boxx_next = y_boxx_reg + BOXX_VELOCITY;  // move down
+    end  
+    
+    // boxx rom data square boundaries
+    assign x_boxx_l = x_boxx_reg;
+    assign y_boxx_t = y_boxx_reg;
+    assign x_boxx_r = x_boxx_l + BOXX_SIZE - 1;
+    assign y_boxx_b = y_boxx_t + BOXX_SIZE - 1;
+    
+    // rom object status signal
+    wire boxx_on;
+                    
+    // pixel within rom square boundaries
+    assign boxx_on = (x_boxx_l <= x) && (x <= x_boxx_r) &&
+                     (y_boxx_t <= y) && (y <= y_boxx_b);   
     
     
     wire box1_on, obs1_on, obs2_on,obs3_on,obs4_on;
     // Main character box design
-    assign box1_on = ((x >= 40)   && (x < 91)   &&  (y >= 200) && (y < 250));
+//    assign box1_on = ((x >= 40)   && (x < 91)   &&  (y >= 200) && (y < 250));
     // Obstacle character box design
-    assign obs1_on = ((x >= 455)   && (x < 590)   &&  (y >= 100) && (y < 130));
+    assign obs1_on = ((x >= 455)   && (x < 600)   &&  (y >= 100) && (y < 130));
     assign obs2_on = ((x >= 400)   && (x < 550)   &&  (y >= 200) && (y < 230));
     assign obs3_on = ((x >= 250)   && (x < 400)   &&  (y >= 150) && (y < 180));
     assign obs4_on = ((x >= 285)   && (x < 430)   &&  (y >= 350) && (y < 380));
     
-    // Drivers for Status Signals
-//    // Upper Sections
-//    assign u_white_on  = ((x >= 0)   && (x < 91)   &&  (y >= 0) && (y < 412));
-//    assign u_yellow_on = ((x >= 91)  && (x < 182)  &&  (y >= 0) && (y < 412));
-//    assign u_aqua_on   = ((x >= 182) && (x < 273)  &&  (y >= 0) && (y < 412));
-//    assign u_green_on  = ((x >= 273) && (x < 364)  &&  (y >= 0) && (y < 412));
-//    assign u_violet_on = ((x >= 364) && (x < 455)  &&  (y >= 0) && (y < 412));
-//    assign u_red_on    = ((x >= 455) && (x < 546)  &&  (y >= 0) && (y < 412));
-//    assign u_blue_on   = ((x >= 546) && (x < 640)  &&  (y >= 0) && (y < 412));
-//    // Lower Sections
-//    assign l_blue_on   = ((x >= 0)   && (x < 91)   &&  (y >= 412) && (y < 480));
-//    assign l_black1_on = ((x >= 91)  && (x < 182)  &&  (y >= 412) && (y < 480));
-//    assign l_violet_on = ((x >= 182) && (x < 273)  &&  (y >= 412) && (y < 480));
-//    assign l_gray_on   = ((x >= 273) && (x < 364)  &&  (y >= 412) && (y < 480));
-//    assign l_aqua_on   = ((x >= 364) && (x < 455)  &&  (y >= 412) && (y < 480));
-//    assign l_black2_on = ((x >= 455) && (x < 546)  &&  (y >= 412) && (y < 480));
-//    assign l_white_on  = ((x >= 546) && (x < 640)  &&  (y >= 412) && (y < 480));
+
     
     // Set RGB output value based on status signals
     always @*
         if(~video_on)
             rgb = BLACK;
         else
-            if(box1_on)
+            if(boxx_on)
                 rgb = GREEN;
             else if(obs1_on)
                 rgb = RED;
