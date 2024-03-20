@@ -24,8 +24,7 @@ module top(
     btn_debounce dDown(.clk(clk_100MHz), .btn_in(down), .btn_out(w_down));
     
     pixel_gen pg(.clk(clk_100MHz), .reset(w_reset), .up(w_up), .down(w_down), 
-                 .left(w_left), .right(w_right), .video_on(w_video_on), 
-                 .p_tick(w_p_tick), .x(w_x), .y(w_y), .rgb(rgb_next));
+                  .video_on(w_video_on), .p_tick(w_p_tick), .x(w_x), .y(w_y), .rgb(rgb_next));
                  
                  
     
