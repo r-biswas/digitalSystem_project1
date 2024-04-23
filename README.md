@@ -30,6 +30,11 @@ Finally we were able to make all the obstacles work randomly on the vertical axi
 play games with the help of fpga buttons,also when the collison happens game reset and the palyer is out, only the score is not counted properly rest everything is working fine.
 
 
+Team Members Name: Raj Patel(22110214)
+Team Members Name: Ranit biswas(22110217)
+Team Members Name: Shreel Chawla(22110243)
+
+
 
 
 
