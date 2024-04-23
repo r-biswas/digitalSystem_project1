@@ -36,7 +36,10 @@ Team Members Name: Shreel Chawla(22110243)
 
 
 
-
+## References:
+1. https://github.com/FPGADude/Digital-Design/tree/453176c52977123539c0c8a999ce612b4c45e073/FPGA%20Projects/VGA%20Projects/VGA%20No%20Signal%20Screen
+2. https://youtu.be/DqyOiPUn_LM
+3. https://www.fpga4student.com/2017/09/seven-segment-led-display-controller-basys3-fpga.html
 
 
 
