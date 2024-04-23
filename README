@@ -3,6 +3,15 @@ In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-styl
 Players can control a block character through a series of upcoming obstacles, represented as rectangle bars on the screen.
 The objective is to avoid colliding with these bars while accumulating points to navigate the obstacles successfully.
 
+<img src ='https://github.com/r-biswas/digitalSystem_project1/assets/125371277/bbea5f82-ba99-4212-b5b3-e398be41c377' width= '800px'>
+
+
+While doing the project we started to connect a monitor(vga cable) with FPGA  board, one the first day we got
+error that pixels of monitor did not match with our pixel size, later on we have resolved them with the help of TA.
+After that we encountered a problem when all 4 obstacles were showing but 3 of the of them were of different pattern.
+
+
+
 
 
 
