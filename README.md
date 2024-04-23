@@ -27,7 +27,7 @@ have used the debounce module because we are using buttons here. While making lo
 but at last, we wrote the logic of collision and hopefully it is working now also.
 
 Finally we were able to make all the obstacles work randomly on the vertical axis, provided in the video, also we were able to 
-play games with the help of fpga buttons, only the score is not counted properly rest everything is working fine.
+play games with the help of fpga buttons,also when the collison happens game reset and the palyer is out, only the score is not counted properly rest everything is working fine.
 
 
 
