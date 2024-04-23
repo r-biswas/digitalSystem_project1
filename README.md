@@ -1,4 +1,8 @@
+## Working Demo
+
 https://www.youtube.com/playlist?list=PLpHg9he5f4pJFb-dq5yv2FErB1TEemIFY
+
+##
 what we were supposed to do.
 In ‘Dodge Through Bars,’ our project aims to develop an engaging arcade-style game using the Basys 3 FPGA board. 
 Players can control a block character through a series of upcoming obstacles, represented as rectangle bars on the screen.
